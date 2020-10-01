@@ -6,6 +6,12 @@ from pyfaker import Fake
 import random 
 
 def dict_approach():
+    '''
+    method runs for 10k iteration for different fake profiles
+    and returns the most common bloodgroup, mean current location, oldest person age
+    and the average age.
+    This method is executed using dictionary approach.
+    '''
     fake = Faker()
     counts, dict1 = dict(), dict()
     mean_loc1, mean_loc2 = 0, 0
@@ -29,6 +35,12 @@ def dict_approach():
     return counts
 
 def named_tuple():
+    '''
+    method runs for 10k iteration for different fake profiles
+    and returns the most common bloodgroup, mean current location, oldest person age
+    and the average age.
+    This method is executed using namedtuple approach.
+    '''
     fake = Faker()
     counts = dict()
     
@@ -53,6 +65,11 @@ def named_tuple():
     return dt
 
 def stock_price():
+    '''
+    generate 100 companies from pyfake library and create a random dataset
+    for high, close and open of stock value.
+    return - max-high stock price, open-stock price and close-stock price.
+    '''
     weights = []
     for _ in range(100):
         weights.append(random.uniform(0.1, 1.0))
